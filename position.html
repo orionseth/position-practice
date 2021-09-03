@@ -36,36 +36,40 @@
         color: #343a40;
       }
 
+      /* CONTAINER */
       .parent {
         background-color: #dee2e6;
         width: 800px;
         height: 400px;
         margin: 100px auto;
-
         position: relative;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
       }
       .verticle-axis {
         border-left: 1px dashed #212529;
-        height: 400px;
-
-        position: absolute;
-        left: 50%;
+        grid-area: 1 / 2 / -1 / 2;
       }
       .horizontal-axis {
         border-top: 1px dashed #212529;
-        width: 800px;
-
-        position: absolute;
-        top: 50%;
+        grid-area: 2 / 1 / 2 / -1;
       }
+
+      /* ITEMS */
       .position-item {
         width: 80px;
         height: 40px;
-        background-color: #ff922b;
+        position: absolute;
 
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+
+      .position-item--center {
+        background-color: #ff922b;
       }
     </style>
   </head>
@@ -74,7 +78,7 @@
     <div class="parent">
       <div class="verticle-axis"></div>
       <div class="horizontal-axis"></div>
-      <p class="position-item">Test</p>
+      <p class="position-item position-item--center">Test</p>
     </div>
   </body>
 </html>
