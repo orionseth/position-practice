@@ -12,17 +12,17 @@
 
     <style>
       /*
-    SPACING SYSTEM (px)
-    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+          SPACING SYSTEM (px)
+          2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
-    FONT SIZE SYSTEM (px)
-    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-    */
+          FONT SIZE SYSTEM (px)
+          10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+          */
 
       /*
-    MAIN COLOR: #087f5b
-    GREY COLOR: #343a40
-    */
+          MAIN COLOR: #087f5b
+          GREY COLOR: #343a40
+          */
 
       * {
         margin: 0;
@@ -35,8 +35,46 @@
         font-family: "Inter", sans-serif;
         color: #343a40;
       }
+
+      .parent {
+        background-color: #dee2e6;
+        width: 800px;
+        height: 400px;
+        margin: 100px auto;
+
+        position: relative;
+      }
+      .verticle-axis {
+        border-left: 1px dashed #212529;
+        height: 400px;
+
+        position: absolute;
+        left: 50%;
+      }
+      .horizontal-axis {
+        border-top: 1px dashed #212529;
+        width: 800px;
+
+        position: absolute;
+        top: 50%;
+      }
+      .position-item {
+        width: 80px;
+        height: 40px;
+        background-color: #ff922b;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     </style>
   </head>
 
-  <body></body>
+  <body>
+    <div class="parent">
+      <div class="verticle-axis"></div>
+      <div class="horizontal-axis"></div>
+      <p class="position-item">Test</p>
+    </div>
+  </body>
 </html>
